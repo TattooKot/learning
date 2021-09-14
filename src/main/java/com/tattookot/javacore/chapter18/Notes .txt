@@ -29,3 +29,14 @@ AbstractCollection
         HashSet extends AbstractSet
             LinkedHashSet extends HashSet
         TreeSet extends AbstractSet implements NavigableSet
+
+
+HashSet Не гарантує порядок який був при внесенні
+LinkedHashSet гарантує порядок який був при внесенні
+TreeSet сортує данні по зростанню, від меншого до більшого
+
+PriorityQueue сортує чергу по зротанню, від меншого до більшого, або за вказаним компратором
+ArrayDeque створює чергу за принципом - останнім прийшов — першим пішов(папка документів на столі,
+спочатку верхній документ. Можна додавати документи на папку, і тоді вони будуть обробленні першими)
+
+
