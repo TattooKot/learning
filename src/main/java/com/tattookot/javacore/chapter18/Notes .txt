@@ -1,0 +1,31 @@
+Ієрархія Collection Framework:
+
+Interfaces:
+Iterable
+    Collection
+        Set
+            SortedSet
+        List
+        Queue
+            Deque
+
+
+Classes:
+AbstractCollection
+
+    AbstractList extends AbstractCollection implements List
+        ArrayList extends AbstractList
+
+    AbstractQueue extends AbstractCollection implements Queue
+        PriorityQueue extends AbstractQueue
+
+    AbstractDeque extends AbstractCollection implements Deque
+
+    AbstractSequentalList extends AbstractCollection
+        LinkedList extends AbstractSequentalList implements List,Deque, Queue
+
+    AbstractSet extends AbstractCollection implements Set
+        EnumSet extends AbstractSet
+        HashSet extends AbstractSet
+            LinkedHashSet extends HashSet
+        TreeSet extends AbstractSet
