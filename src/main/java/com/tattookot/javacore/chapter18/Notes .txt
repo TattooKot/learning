@@ -28,4 +28,4 @@ AbstractCollection
         EnumSet extends AbstractSet
         HashSet extends AbstractSet
             LinkedHashSet extends HashSet
-        TreeSet extends AbstractSet
+        TreeSet extends AbstractSet implements NavigableSet
