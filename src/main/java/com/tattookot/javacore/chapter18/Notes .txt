@@ -12,15 +12,11 @@ Iterable
 
 Classes:
 AbstractCollection
-
     AbstractList extends AbstractCollection implements List
         ArrayList extends AbstractList
-
     AbstractQueue extends AbstractCollection implements Queue
         PriorityQueue extends AbstractQueue
-
     AbstractDeque extends AbstractCollection implements Deque
-
     AbstractSequentalList extends AbstractCollection
         LinkedList extends AbstractSequentalList implements List,Deque, Queue
 
@@ -42,3 +38,19 @@ ArrayDeque створює чергу за принципом - останнім 
 Перебрати елементи будь якої колекції можна або ітератором, сплітІтеротором або в циклі for
 СплітІтератор має в собі методи forEachRemaining та tryAdvance які роблять те саме що hasNext and next в ітераторі
 
+Ієрархія Map's
+Інтерфейси
+Map
+    Map.Entry - внутрішній клас, який повертає пару ключ значення
+    SortedMap - наслідує інтерфейс Мап, і повертає відсортовану за зростанням ключів, від меншого
+    до більшого мапу
+        NavigableMap
+
+Classes
+AbstractMap implements Map
+    EnumMap extends AbstractMap
+    HashMap extends AbstractMap
+        LinkedHashMap extends HashMap
+        IdentityHashMap extends HashMap
+    TreeMap extends AbstractMap
+    WeekHashMap extends AbstractMap
