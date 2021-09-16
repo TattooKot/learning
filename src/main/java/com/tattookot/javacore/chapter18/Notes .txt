@@ -71,3 +71,6 @@ Comparator<String > mc = (aStr, bStr) -> bStr.compareTo(aStr);
 Компаратор повертає 0 якщо об'єкти рівні, -1, якщо 1<2, і 1 якщо 1>2
 Для порівняння в компараторі використовуються методи compareTo
 o1.compareTo(o2);
+
+Якщо потрібно викоритстати ще один компаратор, у випадку рівності значень в першому,
+використовується метод firstComparator.thenComparing(secondComparator);
