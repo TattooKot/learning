@@ -10,7 +10,7 @@ public class TreeMapDemo2 {
 
         TreeMap<String, Double> hm = new TreeMap<>(new TComp());
 
-        hm.put("Kolia Pisun", 3434.34);
+        hm.put("Steve Jobs", 3434.34);
         hm.put("Natali Yedynak", 123.22);
         hm.put("Stas Kot", 1378.00);
         hm.put("Andriy Abramov", 99.22);
@@ -24,9 +24,9 @@ public class TreeMapDemo2 {
         }
 
         System.out.println();
-        double balance = hm.get("Kolia Pisun");
-        hm.put("Kolia Pisun", balance + 1000);
-        System.out.println("New balance for 'Kolia Pisun': " + hm.get("Kolia Pisun"));
+        double balance = hm.get("Steve Jobs");
+        hm.put("Steve Jobs", balance + 1000);
+        System.out.println("New balance for 'Steve Jobs': " + hm.get("Steve Jobs"));
     }
 }
 
