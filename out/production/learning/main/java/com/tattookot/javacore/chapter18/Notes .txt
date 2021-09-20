@@ -1,0 +1,91 @@
+Ієрархія Collection Framework:
+
+Interfaces:
+Iterable
+    Collection
+        Set
+            SortedSet
+        List
+        Queue
+            Deque
+
+
+Classes:
+AbstractCollection
+    AbstractList extends AbstractCollection implements List
+        ArrayList extends AbstractList
+    AbstractQueue extends AbstractCollection implements Queue
+        PriorityQueue extends AbstractQueue
+    AbstractDeque extends AbstractCollection implements Deque
+    AbstractSequentalList extends AbstractCollection
+        LinkedList extends AbstractSequentalList implements List,Deque, Queue
+
+    AbstractSet extends AbstractCollection implements Set
+        EnumSet extends AbstractSet
+        HashSet extends AbstractSet
+            LinkedHashSet extends HashSet
+        TreeSet extends AbstractSet implements NavigableSet
+
+
+HashSet Не гарантує порядок який був при внесенні
+LinkedHashSet гарантує порядок який був при внесенні
+TreeSet сортує данні по зростанню, від меншого до більшого
+
+PriorityQueue сортує чергу по зротанню, від меншого до більшого, або за вказаним компратором
+ArrayDeque створює чергу за принципом - останнім прийшов — першим пішов(папка документів на столі,
+спочатку верхній документ. Можна додавати документи на папку, і тоді вони будуть обробленні першими)
+
+Перебрати елементи будь якої колекції можна або ітератором, сплітІтеротором або в циклі for
+СплітІтератор має в собі методи forEachRemaining та tryAdvance які роблять те саме що hasNext and next в ітераторі
+
+Ієрархія Map's
+Інтерфейси
+Map
+    Map.Entry - внутрішній клас, який повертає пару ключ значення
+    SortedMap - наслідує інтерфейс Мап, і повертає відсортовану за зростанням ключів, від меншого
+    до більшого мапу
+        NavigableMap
+
+Classes
+AbstractMap implements Map
+    EnumMap extends AbstractMap
+    HashMap extends AbstractMap
+        LinkedHashMap extends HashMap
+        IdentityHashMap extends HashMap
+    TreeMap extends AbstractMap implements NavigableMap
+    WeekHashMap extends AbstractMap
+
+HashMap не гаратнує порядок виведення, а LinkedHashMap гарантує що об'єкти будуть в тому ж порядку,
+в якому вони були внсені в мапу
+TreeMap гаратнує що елементи будуть відсортовані в порядку зростання КЛЮЧІВ, від меншого до більшого
+
+В мапи завжди є можливість додати компаратор, за замовчуванням мапи сортуються від меншого до більшого,
+але якщо є потреба зробити своє сортування, потрібно зробити власний компаратор, який потім передати
+в конструктор при створенні мапи
+Якщо потрібне зворотнє сортування, від більшого до меншого, можна викликати метод
+у об'єкта класа компартор зі звичайним сортуванням - reversed()
+Приклад створення зровотнього сортування з використанням лямбди:
+Comparator<String > mc = (aStr, bStr) -> bStr.compareTo(aStr);
+
+Або ж можна передати одразу в конструктор мапи Comparator.reverseOrder().
+Компаратор повертає 0 якщо об'єкти рівні, -1, якщо 1<2, і 1 якщо 1>2
+Для порівняння в компараторі використовуються методи compareTo
+o1.compareTo(o2);
+
+Якщо потрібно викоритстати ще один компаратор, у випадку рівності значень в першому,
+використовується метод firstComparator.thenComparing(secondComparator);
+
+Stack створює звичайний стек(по принципу: останній прийшов - перший пішов)
+Але замість нього рекомендується використовувати ArrayDeque;
+
+HashTable це старий варіант використання пар ключ-значення
+HashTable використвувалась як реалізація абстрактного класу Dictionary
+HashTable не дозволяє зберігати ключі рівні null;
+HashTable не підтримує Iterator, тому треба використовувати Enumeration,
+або можна отримати keySet(), or entrySet(), і тоді вже можна працювати з ними як з колекціями
+через цикли for, or Iterators.
+
+Properties наслідує клас HashTable, і допускає тільки String ключі
+В конструктор Properties можна передати ще один Properties, і в разі якщо в перешому об'єкті не буде знайдено ключ,
+почнеться пошук ключа у переданому об'єкті
+Також є можливість встановити значення за замовчуванням, якщо ключа не знайдено

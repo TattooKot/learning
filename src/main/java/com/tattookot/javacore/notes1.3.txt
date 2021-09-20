@@ -1,0 +1,23 @@
+Керування всіми процесами які пов'язані з створенням і перехопленням виключень
+відбувається з допомогою 5 ключових слів - try, catch, throw, throws, finally
+
+Всі ексепшени наслідуються від класу Throwable
+
+Ієрархія
+Throwable
+    Exception
+        RunTimeException
+    Error
+
+
+RunTimeException - помилки при діленні на нуль, або помилки інедексації масивів
+Error-и це аварійні помилки, які не можуть бути перехоплені і правильно оброблені в коді
+
+Якщо ексепшн не перехоплюється в коді, тоді він буде перехоаплений стандарним способом,
+виведення стеку в консоль, та зупинка програми
+
+Every try need catch OR finally
+
+If you need to create yours own exception you must create new class,
+and extend this class from Exception
+
