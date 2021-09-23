@@ -1,2 +1,1 @@
-ile
- String next 
+Text from file 3

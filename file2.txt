@@ -1,3 +1,1 @@
-Example of text file
- String next line(number 2)
- and string number 3
+Text from file 2
