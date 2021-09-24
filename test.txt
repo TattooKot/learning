@@ -1,1 +1,1 @@
-Info for array write
+Hello from test.txt

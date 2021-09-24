@@ -16,7 +16,7 @@ public class PushbackReaderDemo {
 
         try(PushbackReader f = new PushbackReader(in)){
             while ((c = f.read()) != -1){
-                switch (c){
+                 switch (c){
                     case '=' :
                         if((c = f.read()) == '=') System.out.print(".eq.");
                         else {
