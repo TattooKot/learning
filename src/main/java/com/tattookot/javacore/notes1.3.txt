@@ -88,3 +88,17 @@ Chapter 21
 1.Канальний ввід-вивід
 2.Потоковий ввід-вивід
 3.Операції в файловій системі
+
+Канали:
+Щоб отримати канал в ніо потбіно виконати конструкцію:
+FileChannel channel = (FileChannel) Files.newByteChannel(Paths.get("(путь до файлу), ОупенОпшнс")
+
+Щоб отримати буфер в ніо потбіно виконати конструкцію:
+MappedByteBuffer buffer = КАНАЛ.map(Channel.MapMode, почаковий_байт, розмір);
+
+Потоки:
+Щоб отримати поток в ніо потбіно виконати конструкцію:
+InputStream fin = Files.newInputStream(Paths.get("file path"))
+(or OutputStream)
+
+
