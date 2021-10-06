@@ -36,3 +36,24 @@ Chapter 28
 Callable на відмінну від Тред, повертає результат виконання
 Future приймає Коллабл і дозволяє отримати результат виконання в майбутньому,
 після завершення потоку коллабл
+
+Lock виступає альтернативою блокам синхронайзд,
+при потребі отримати доступ до загальних ресурсів
+Класс ReentrantLock є реалізацією інтерфейсу Лок, за допомогою якого ми створюємо локи
+
+Fork/Join Framework дозволяє розпалалелити процеси на різні процесори або ядра,
+створюючи цим паралельність виконання процесів, яке також називають паралельним програмуванням
+
+В Форк\джоін використвується альтернатива тредам - ForkJoinTask
+RecursiveTask return result
+RecursiveAction return nothing
+RecursiveTask and RecursiveAction have own method for working code - compute()(run() in Thread)
+This classes uses like parents classes for task classes
+(class customer extends recursiveTask)
+
+All this class executes from ForkJoinPool
+If you want execute taks from pool, you must all methode invoke({your task})
+Method invoke starts your task and return result from this task
+
+If you want execute your task without waiting for result, you can call method execute()
+After calling this method task starts, but we dont waiting, and going up our code
